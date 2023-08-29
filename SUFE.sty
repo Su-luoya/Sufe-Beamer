@@ -1,0 +1,134 @@
+\mode<presentation>  % 指定mode为presentation
+
+% 自定义命令
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}} % 自定义命令，环境中的内容将以指定的格式显示，#1为占位符，如\cmd{chapter}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}} % 自定义命令，环境中的内容将以指定的格式显示，#1为占位符，如\env{itemize}
+\definecolor{deepblue}{rgb}{0, 0, 0.5}
+\definecolor{deepred}{rgb}{0.6, 0, 0}
+\definecolor{deepgreen}{rgb}{0, 0.5, 0}
+\definecolor{halfgray}{gray}{0.55}
+
+% 设置代码块的格式
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+% 选择幻灯片正文的主题
+\useinnertheme{circles}
+% 选择底栏，logo，侧栏和帧标题的主题
+% authorinstitutetitle: 显示作者名，机构，和标题的简略名
+% subsection=⟨true or false):是否于顶栏显示子章节标题
+\useoutertheme[footline=authorinstitutetitle, subsection=false]{smoothbars}
+
+% 设定字体
+\setbeamerfont{frametitle}{size=\large} % 每一帧的标题的文字大小
+\setbeamerfont{date}{size=\tiny} % 标题页日期的文字大小
+\setbeamerfont{footnote}{size=\tiny}
+
+% 设定导航栏、参考文献、标题的风格
+% 去掉右下角，底栏上方的那一排导航按钮
+\setbeamertemplate{navigation symbols}{}  
+\setbeamertemplate{caption}[numbered]
+
+% 自定义底栏，在页脚加入页码
+% 可以参考 http://tex.stackexchange.com/questions/100838/beamer-dresden-theme-miniframes-appeareance-and-frame-number-insertion
+
+\newcommand{\frameofframes}{/}
+\newcommand{\setframeofframes}[1]{\renewcommand{\frameofframes}{#1}}
+\setbeamertemplate{footline} 
+  {%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex, dp=1.125ex,%
+      leftskip=.3cm, rightskip=.3cm plus1fil]{author in head/foot}%
+      \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+      \hfill%
+      {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[ht=2.5ex, dp=1.125ex,%
+      leftskip=.3cm, rightskip=.3cm plus1fil]{title in head/foot}%
+      {\usebeamerfont{title in head/foot}\insertshorttitle}%
+      \hfill%
+      {\usebeamerfont{frame number}\usebeamercolor[fg]{frame number}\insertframenumber~\frameofframes~\inserttotalframenumber}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+  }
+
+
+% 定义颜色
+\xdefinecolor{Cornell}{rgb}{0.7, 0.11, 0.11}  % RGB#Cornell Red
+\xdefinecolor{sufered}{cmyk}{0.5, 1, 1, 0.2} % SUFE Red CMYK(50 100 100 20)
+\xdefinecolor{sufeblue}{cmyk}{1, 0.85, 0.31, 0} % SUFE Blue CMYK(100 85 31 0)
+\xdefinecolor{blocktitlecolor}{rgb}{0.15, 0.15, 0.5058}
+\xdefinecolor{blockbodycolor}{rgb}{0.9137, 0.9137, 0.94902}
+\xdefinecolor{exampletitlecolor}{rgb}{0.1568627451, 0.368627451, 0.09019607843}
+\xdefinecolor{examplebodycolor}{rgb}{0.9098039216, 0.937254902, 0.9058823529}
+\xdefinecolor{alertbodycolor}{rgb}{0.9647058824, 0.9058823529, 0.9019607843}
+
+% 调色板颜色，渐变色，控制不同视觉重要性部位的颜色渐变
+\setbeamercolor{structure}{fg=sufered}
+\setbeamercolor{palette primary}{use=structure, fg=white, bg=structure.fg}
+\setbeamercolor{palette secondary}{use=structure, fg=white, bg=structure.fg!75!black}
+\setbeamercolor{palette tertiary}{use=structure, fg=white, bg=structure.fg!75!black}
+\setbeamercolor{palette quaternary}{fg=white, bg=structure.fg!75!black} % 底部下栏和顶部导航栏的颜色，为25%的黑色混合
+
+% 各部件的颜色
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{footline}{bg=sufered} % 底部上栏的背景填充色
+\setbeamercolor{frametitle}{bg=sufered, fg=white} % 每一帧的标题的背景填充色和文字颜色
+\setbeamercolor{title}{bg=sufered} % 标题页标题的背景填充色
+\setbeamercolor{titlelike}{parent=palette primary}
+
+\setbeamercolor{block title}{bg=blocktitlecolor, fg=white}
+\setbeamercolor{block body}{bg=blockbodycolor, fg=black}
+
+\setbeamercolor{block title alerted}{bg=deepred, fg=white}
+\setbeamercolor{block body alerted}{bg=alertbodycolor, fg=black}
+
+\setbeamercolor*{block title example}{use={normal text, example text},bg=exampletitlecolor, fg=white}
+\setbeamercolor*{block body example}{use={normal text, example text},bg=examplebodycolor, fg=black}
+
+\setbeamercolor{fine separation line}{}
+\setbeamercolor{item projected}{fg=white}
+\setbeamercolor{separation line}{}
+
+% 无侧边栏时，下列选项不需要设定，参数含义详见beameruserguide
+
+% \setbeamercolor{sidebar}{bg=sufered}
+% \setbeamercolor{sidebar}{parent=palette primary}
+% \setbeamercolor*{sidebar}{use=structure, bg=structure.fg}
+% \setbeamercolor{palette sidebar primary}{use=normal text, fg=normal text.fg}
+% \setbeamercolor{palette sidebar quaternary}{use=structure, fg=structure.fg}
+% \setbeamercolor{palette sidebar secondary}{use=structure, fg=structure.fg}
+% \setbeamercolor{palette sidebar tertiary}{use=normal text, fg=normal text.fg}
+% \setbeamercolor{palette sidebar quaternary}{fg=white}
+% \setbeamercolor{section in sidebar}{fg=brown}
+% \setbeamercolor{section in sidebar shaded}{fg=grey}
+% \setbeamercolor{subsection in sidebar}{fg=brown}
+% \setbeamercolor{subsection in sidebar shaded}{fg=grey}
+
+% 在每一章开始的时候显示目录，参数含义详见beameruserguide
+
+\AtBeginSection[]{
+	\begin{frame}
+		\tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/hide/hide, subsubsectionstyle=show/shaded/hide]
+	\end{frame}
+}
+
+% 在每一子章节开始的时候也显示目录，一般不需要
+
+% \AtBeginSubsection[]{
+% 	\begin{frame}
+% 		\tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/shaded/hide, subsubsectionstyle=show/shaded/hide]
+% 	\end{frame}
+% }
+
+\mode<all> % 指定mode为all
