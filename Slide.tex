@@ -5,14 +5,21 @@
 
 % Font
 \usepackage{bookman}
-\usefonttheme{serif}
+\usefonttheme{Serif}
 %\usepackage[T1]{fontenc}
 %\usepackage{tgbonum}
 
 % Other packages
-\usepackage{hyperref, appendixnumberbeamer}
-\usepackage{latexsym, amsmath, xcolor, multicol, booktabs}
-\usepackage{graphicx, listings, stackengine}
+\usepackage{hyperref}
+\usepackage{appendixnumberbeamer}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{stackengine}
 
 % SUFE.sty
 \usepackage{SUFE} 
@@ -34,8 +41,8 @@
 %% Author
 \author[XXX] % The short name
 {
-%XXX
-XXX
+%Name
+Your name
 %\inst{1}
 %\and
 %XXX 
@@ -65,113 +72,112 @@ Shanghai University of Finance and Economics
 \begin{document}
 \begin{CJK*}{UTF8}{gbsn}
 
-%Title page
-\begin{frame}[noframenumbering]
-%	\thispagestyle{empty}
-	\titlepage
-	% Logo
-	\vspace{-0.5cm}
-    \begin{figure}[htpb] 
-        \begin{center}
-            \includegraphics[width=0.19 \linewidth]{sufe_logo.png}
-        \end{center}  
-    \end{figure}
-\end{frame}
+	%Title page
+	\begin{frame}[noframenumbering]
+		%	\thispagestyle{empty}
+		\titlepage{}
+		% Logo
+		\vspace{-0.5cm}
+		\begin{figure}[htpb]
+			\begin{center}
+				\includegraphics[width=0.19 \linewidth]{sufe_logo.png}
+			\end{center}
+		\end{figure}
+	\end{frame}
 
-% Contents page
-\begin{frame}{Contents}
-	\tableofcontents[sectionstyle=show,
- 	subsectionstyle=show/shaded/hide,
- 	subsubsectionstyle=show/shaded/hide]
-\end{frame}
+	% Contents page
+	\begin{frame}{Contents}
+		\tableofcontents[sectionstyle=show,
+			subsectionstyle=show/shaded/hide,
+			subsubsectionstyle=show/shaded/hide]
+	\end{frame}
 
-% Body
-\section{Background}
+	% Body
+	\section{Background}
 
-\begin{frame}{lalala}
-	\textcolor{sufered}{hk}
-	1234543
-	\cite{Greiner2008}
-	啦啦啦好家伙真好啊
-\end{frame}
+	\begin{frame}{LL}
+		\textcolor{sufered}{HK}
+		1234543~\cite{origin}
+		啦啦啦好家伙真好啊
+	\end{frame}
 
-\section{Literature Review}
-\begin{frame}
-	123
-\end{frame}
+	\section{Literature Review}
+	\begin{frame}
+		123
+	\end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% End
-\begin{frame}[allowframebreaks]%{End}
-	\begin{center}
-		\Huge\textbf{\textit{\texttt{Thanks!}}}
-	\end{center}
-\end{frame}
+	% End
+	\begin{frame}[allowframebreaks]%{End}
+		\begin{center}
+			\Huge\textbf{\textit{\texttt{Thanks!}}}
+		\end{center}
+	\end{frame}
 
-% Reference
-%\appendix
-\begin{frame}{Reference}
-	\addtocounter{framenumber}{-1}
-	\printbibliography % [heading=bibintoc, title=Reference]
-\end{frame}
+	% Reference
+	%\appendix
+	\begin{frame}{Reference}
+		\addtocounter{framenumber}{-1}
+		\printbibliography{} % [heading=bibintoc, title=Reference]
+	\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Snippets
-\begin{frame}[noframenumbering, plain]{Snippets}
-	\begin{multicols}{2}
-		\begin{enumerate}
-			\item \cite[Page10]{barro1990}
-			\item parencite \\ \parencite{Greiner2008}
-			\item footcite \footcite{green2020}
-			\item \cite{Greiner2008}
-		\end{enumerate}
-		\begin{itemize}
-			\item \[V = \frac{4}{3}\pi r^3\]
-			\item $ V = \frac{4}{3}\pi r^3 $
-		\end{itemize}
-	\end{multicols}	
-	\begin{equation}
-		\label{eq1}
-		V = \frac{4}{3}\pi r^3
-	\end{equation}
-	\center 
-	As Equation(\ref{eq1}) shows, $\cdots$, this \emph{equation} is \alert{important}.
-\end{frame}
+	% Snippets
+	\begin{frame}[noframenumbering, plain]{Snippets}
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item 123~\cite[Page10]{barro}
+				\item parencite \\ \parencite{Greiner}
+				\item foot cite \footcite{green}
+				\item 1234~\cite{Greiner}
+			\end{enumerate}
+			\begin{itemize}
+				\item \[V = \frac{4}{3}\pi r^3\]
+				\item $ V = \frac{4}{3}\pi r^3 $
+			\end{itemize}
+		\end{multicols}
+		\begin{equation}
+			\label{eq1}
+			V = \frac{4}{3}\pi r^3
+		\end{equation}
+		\center{}
+		As Equation (\ref{eq1}) \textcolor{sufered}{shows},
+		$\cdots$, this \emph{equation} is \alert{important}.
+	\end{frame}
 
-\begin{frame}[noframenumbering, plain]{Snippets}
-	\begin{columns}
-		\column{0.5\textwidth}
+	\begin{frame}[noframenumbering, plain]{Snippets}
+		\begin{columns}
+			\column{0.5\textwidth}
 			\begin{block}{Remark}
 				Sample text
 			\end{block}
 			\begin{alertblock}{Important theorem}
-				Sample text in red box
+				red box
 			\end{alertblock}
 			\begin{examples}
-				Sample text in green box. 
+				Sample text in green box.
 			\end{examples}
-		\column{0.5\textwidth}
+			\column{0.5\textwidth}
 			\begin{table}
-			    \centering
-			    \caption{table1}
-			    \vspace{-0.5cm}
-			    \setlength{\tabcolsep}{5mm}
-				    {
-				    \begin{tabular}{lcc}
-				    \hline
-			        123 & 123 & ad f \\ \hline
-			        \textcolor{deepred}{123} & w & ad f \\ 
-			        \textcolor{sufered}{123} & \alert{ad} f & ad s f \\ \hline
-				    \end{tabular}
-				    }
-			    \label{fig1}
+				\centering
+				\caption{caption}
+				% \vspace{-0.5cm}
+				\setlength{\tabcolsep}{5mm}
+				{
+					\begin{tabular}{lcc}
+						\toprule %\hline
+						1234                     & 123          & a   \\ \midrule
+						\textcolor{deepred}{135} & w            & f   \\
+						\textcolor{sufered}{126} & \alert{a} & d \\ \bottomrule
+					\end{tabular}
+				}
 			\end{table}
-	\end{columns}
-\end{frame}
-%\backupend
-%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\end{columns}
+	\end{frame}
+	%\backupend
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{CJK*}
 \end{document}

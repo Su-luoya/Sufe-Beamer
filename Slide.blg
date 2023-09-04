@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2021/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Slide.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Slide-blx.bib
+Database file #2: ref.bib
+Biblatex version: 3.16
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 5 entries,
+            6393 wiz_defined-function locations,
+            1230 strings with 9428 characters,
+and the built_in function-call counts, 18292 in all, are:
+= -- 970
+> -- 450
+< -- 116
++ -- 338
+- -- 152
+* -- 1291
+:= -- 1822
+add.period$ -- 0
+call.type$ -- 5
+change.case$ -- 45
+chr.to.int$ -- 60
+cite$ -- 8
+duplicate$ -- 1906
+empty$ -- 1828
+format.name$ -- 208
+if$ -- 3895
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 0
+newline$ -- 129
+num.names$ -- 169
+pop$ -- 1366
+preamble$ -- 1
+purify$ -- 56
+quote$ -- 0
+skip$ -- 748
+stack$ -- 0
+substring$ -- 1435
+swap$ -- 594
+text.length$ -- 128
+text.prefix$ -- 4
+top$ -- 1
+type$ -- 158
+warning$ -- 0
+while$ -- 275
+width$ -- 0
+write$ -- 125
